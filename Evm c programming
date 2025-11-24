@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int vote, a = 0, b = 0, c = 0, total = 0;
+
+    while (1) {
+        printf("\n--- EVM Voting ---\n");
+        printf("1. Vote for Candidate A\n");
+        printf("2. Vote for Candidate B\n");
+        printf("3. Vote for Candidate C\n");
+        printf("4. Show Result\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &vote);
+
+        switch (vote) {
+            case 1: a++; total++; break;
+            case 2: b++; total++; break;
+            case 3: c++; total++; break;
+            case 4:
+                printf("\nTotal Votes: %d\n", total);
+                printf("Candidate A: %d\n", a);
+                printf("Candidate B: %d\n", b);
+                printf("Candidate C: %d\n", c);
+                break;
+            case 5:
+                return 0;
+            default:
+                printf("Invalid input!\n");
+        }
+    }
+}
