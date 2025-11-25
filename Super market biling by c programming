@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int qty[50];
+    float price[50], total[50];
+    float subtotal = 0, grandTotal;
+
+    printf("Enter number of items: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("\nItem %d price: ", i + 1);
+        scanf("%f", &price[i]);
+
+        printf("Item %d quantity: ", i + 1);
+        scanf("%d", &qty[i]);
+
+        total[i] = price[i] * qty[i];  // total for each item
+    }
+
+    printf("\n============================\n");
+    printf("       SUPERMARKET BILL\n");
+    printf("============================\n");
+    printf("No   Price    Qty   Total\n");
+
+    for (i = 0; i < n; i++) {
+        printf("%2d   %.2f    %2d   %.2f\n", i + 1, price[i], qty[i], total[i]);
+        subtotal += total[i];
+    }
+
+    grandTotal = subtotal; // No tax, no discount (simple version)
+
+    printf("============================\n");
+    printf("SUBTOTAL: %.2f\n", subtotal);
+    printf("GRAND TOTAL: %.2f\n", grandTotal);
+    printf("============================\n");
+
+    return 0;
+}
