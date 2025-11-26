@@ -1,0 +1,20 @@
+//METHOD OF USING USER DEFINED FUNCTIONS C PROGRAM 1
+
+#include <stdio.h>
+
+void main()
+{
+    void add();
+    printf("hello");
+    printf("\ni am working with");
+    printf("\nfunctions");
+    add();
+    printf("\n end of the program");
+}
+   void add()
+   {
+        int a,b;
+        printf("\n enter a and b values:\n");
+        scanf("%d%d",&a,&b);
+        printf("%d",(a+b));
+   }
