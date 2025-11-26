@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n, digit;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    printf("Individual digits:\n");
+
+    while (n > 0) {
+        digit = n % 10;     // get last digit
+        printf("%d\n", digit);
+        n = n / 10;         // remove last digit
+    }
+
+    return 0;
+}.   
+       //output 
+7
+6
+5
+4
