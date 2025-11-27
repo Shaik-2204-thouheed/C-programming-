@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-void checkEvenOdd(int n) {
+void EvenOdd(int n) {
     if (n % 2 == 0)
         printf("%d is Even\n", n);
     else
