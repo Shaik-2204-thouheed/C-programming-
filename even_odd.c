@@ -4,10 +4,10 @@ int main() {
     scanf("%d",&a);
     }
 
-    if (n % 2 == 0)
+    if (n % 2 == 0){
         printf("%d is even.\n", n);
-    else
+    } else  {
         printf("%d is odd.\n", n);
-
+    }
     return 0;
 }
